@@ -44,7 +44,7 @@ function trocarImagem () {
     const idOpcaoSelecionada = document.querySelector('[name="opcao-imagem"]:checked').id;
 
     imagemSelecionada = idOpcaoSelecionada.charAt(0);
-    imagemVisualizacao.src = imagemVisualizacao.src = `./imagens/opcoes-cores/imagens-${opcoesCores[corSelecionada].nome}/imagem-${imagemSelecionada}.jpeg`;
+    imagemVisualizacao.src = imagemVisualizacao.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].pasta}/imagem-${imagemSelecionada}.jpeg`;
 };
 
 opcaoImagemSelecionada.forEach(element => {
@@ -75,10 +75,10 @@ function trocarCor () {
 
     tituloProduto.innerText = `Pulseira loop esportiva ${opcoesCores[corSelecionada].nome} para caixa de ${opcoesTamanho[tamanhoSelecionado]}`;
     tituloCor.innerText = `Cor - ${opcoesCores[corSelecionada].nome}`;
-    imagemVisualizacao.src = imagemVisualizacao.src = `./imagens/opcoes-cores/imagens-${opcoesCores[corSelecionada].nome}/imagem-${imagemSelecionada}.jpeg`;
+    imagemVisualizacao.src = imagemVisualizacao.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].pasta}/imagem-${imagemSelecionada}.jpeg`;
     
     imgMiniatura.forEach(element => {
-        element.src = `./imagens/opcoes-cores/imagens-${opcoesCores[corSelecionada].nome}/imagem-${element.id.charAt(0)}.jpeg`;
+        element.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].pasta}/imagem-${element.id.charAt(0)}.jpeg`;
     });
 }
 
